@@ -10,10 +10,11 @@ import json
 
 
 #datasets = 'BA-shapes'
-datasets = 'Tree-Cycle'
-#datasets = 'cora'
+#datasets = 'Tree-Cycle'
+datasets = 'cora'
 #datasets = 'citeseer'
 #datasets = 'pubmed'
+
 
 #with open('datasets/{}/A.pickle'.format(datasets),'rb') as f:
 #  A = pickle.load(f)
