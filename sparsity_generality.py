@@ -10,13 +10,13 @@ import json
 
 
 #datasets = 'BA-shapes'
-#datasets = 'Tree-Cycle'
-datasets = 'cora'
+datasets = 'Tree-Cycle'
+#datasets = 'cora'
 #datasets = 'citeseer'
 #datasets = 'pubmed'
 
-with open('datasets/{}/A.pickle'.format(datasets),'rb') as f:
-  A = pickle.load(f)
+#with open('datasets/{}/A.pickle'.format(datasets),'rb') as f:
+#  A = pickle.load(f)
 with open('datasets/{}/X.pickle'.format(datasets),'rb') as f:
   X = pickle.load(f)
 with open('datasets/{}/Y.pickle'.format(datasets),'rb') as f:
@@ -334,15 +334,6 @@ for _, node in enumerate(test_nodes):
   known_node_label[node] = first
 
 
-
-accuracy = float(accurately_classified_nodes/len(test_nodes))
-print()
-print("==============================================================")
-print("Test Nodes : {}".format(len(test_nodes)))
-print("Accurately Classified Nodes : {}".format(accurately_classified_nodes))
-print("Accuracy : {}".format(accuracy))
-print("==============================================================")
-
 #print(wrong_nodes)
 my_list = []
 for i, val in enumerate(sen_label_dict):
@@ -351,6 +342,16 @@ for i, val in enumerate(sen_label_dict):
 my_list.sort(reverse = True, key = lambda tup : tup[1])
 
 
+
+
+
+accuracy = float(accurately_classified_nodes/len(test_nodes))
+print()
+print("==============================================================")
+print("Test Nodes : {}".format(len(test_nodes)))
+print("Accurately Classified Nodes : {}".format(accurately_classified_nodes))
+print("Accuracy : {}".format(accuracy))
+print("==============================================================")
 print()
 
 print("Sparsity : {}".format(sparsity_sum/len(test_nodes)))
@@ -369,11 +370,6 @@ for i, val in enumerate (my_list):
 f.write("print(total_len/{})".format(len(my_list)))
  
 f.close()
-
-
-
-
-
 
 
 

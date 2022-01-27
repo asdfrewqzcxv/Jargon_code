@@ -8,14 +8,14 @@ import sys, os
 #import json
 
 
-datasets = 'BA-shapes'
-#datasets = 'Tree-Cycle'
+#datasets = 'BA-shapes'
+datasets = 'Tree-Cycle'
 #datasets = 'cora'
 #datasets = 'citeseer'
 #datasets = 'pubmed'
 
-with open('datasets/{}/A.pickle'.format(datasets),'rb') as f:
-  A = pickle.load(f)
+#with open('datasets/{}/A.pickle'.format(datasets),'rb') as f:
+#  A = pickle.load(f)
 with open('datasets/{}/X.pickle'.format(datasets),'rb') as f:
   X = pickle.load(f)
 with open('datasets/{}/Y.pickle'.format(datasets),'rb') as f:
