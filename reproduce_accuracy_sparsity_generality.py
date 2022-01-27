@@ -7,11 +7,23 @@ from learn_jargon import *
 import sys, os
 import json
 
+my_datasets = ['BA-shapes', 'Tree-Cycle', 'cora', 'citeseer', 'pubmed']
+
+my_argv = sys.argv
+dataset_name = my_argv[1]
+
+
+if not (dataset_name) in my_datasets:
+  print("Use the dataset in {}".format(my_datasets))
+  raise ("Unvalid dataset name")
+
+
+datasets = dataset_name
 
 
 #datasets = 'BA-shapes'
 #datasets = 'Tree-Cycle'
-datasets = 'cora'
+#datasets = 'cora'
 #datasets = 'citeseer'
 #datasets = 'pubmed'
 
@@ -231,7 +243,7 @@ wrong_nodes = set()
 test_nodes1 = list(test_nodes)
 test_nodes1.sort()
 
-print(len(test_nodes1))
+#print(len(test_nodes1))
 cnt = 0
 
 #distinct_sentences = set()
@@ -357,6 +369,7 @@ print()
 
 print("Sparsity : {}".format(sparsity_sum/len(test_nodes)))
 print("Generality : {}".format(len(test_nodes)/len(sen_label_dict)))
+print()
 
 f = open("length.py", 'w')
 f.write("total_len = 0\n")
@@ -367,6 +380,8 @@ for i, val in enumerate (my_list):
   #print(gen)
   cmd = 'total_len = total_len + (len({}))\n'.format(sentence)
   f.write(cmd) 
+
+f.write("print(\"Used sentences = {}\")\n".format(len(my_list)))
 
 f.write("print(total_len/{})".format(len(my_list)))
  

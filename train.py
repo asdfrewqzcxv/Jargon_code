@@ -8,12 +8,22 @@ import sys, os
 #import json
 
 
-#datasets = 'overview_example'
-#datasets = 'cora'
+my_datasets = ['BA-shapes', 'Tree-Cycle', 'cora', 'citeseer', 'pubmed']
+
+my_argv = sys.argv
+dataset_name = my_argv[1]
+
+
+if not (dataset_name) in my_datasets:
+  print("Use the dataset in {}".format(my_datasets))
+  raise ("Unvalid dataset name")
+
+datasets = dataset_name
+
+
 #datasets = 'BA-shapes'
-#datasets = 'BA-Community'
-#datasets = 'Tree-Grid'
-datasets = 'Tree-Cycle'
+#datasets = 'Tree-Cycle'
+#datasets = 'cora'
 #datasets = 'citeseer'
 #datasets = 'pubmed'
 
