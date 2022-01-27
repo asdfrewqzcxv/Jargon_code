@@ -1,6 +1,6 @@
 import pickle
 #import networkx as nx
-#import numpy as np
+import numpy as np
 from jargon import *
 from learn_jargon import *
 
