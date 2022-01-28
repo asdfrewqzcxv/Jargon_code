@@ -72,7 +72,7 @@ print("Recall : {}".format(len(chosen_nodes1 & label_nodes[0])/len(label_nodes[0
 print("Label 1")
 print()
 sentence1 = Sentence()
-sentence1.absList = [ {0: (4.0, 999.0)}, {0: (3.0, 4.0)}, {0: (12.0, 999.0)}]
+sentence1.absList = [ {0: (4.0, 999.0)}, {0: (3.0, 4.0)}, {0: (2.0, 2.0)}]
 sentence1.root = 1
 print("Sentence : {}".format(sentence1.absList))
 print("Subject word idx : {}".format(sentence1.root))
